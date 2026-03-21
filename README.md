@@ -29,10 +29,8 @@
 
 Cloud computing provides
 
-1. On-Demand Self-Service: Provision and terminate using a UI/CLI without
-human interaction.
-2. Broad Network Access: Access services over any networks on any devices using
-standard protocols and methods.
+1. On-Demand Self-Service: Provision and terminate using a UI/CLI without human interaction.
+2. Broad Network Access: Capability is available over the network and accessed through standard mechanism.
 3. Resource Pooling: Economies of scale, cheaper service.
 4. Rapid Elasticity: Scale up and down automatically in response to system load.
 5. Measured Service: Usage is measured. Pay only for what you consume.
