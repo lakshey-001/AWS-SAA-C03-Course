@@ -63,6 +63,7 @@ and the data, but the vendor manges all else.
 5. Software as a Service (SaaS): You consume the software as a service. This
 can be Outlook or Netflix. There are almost no risks or additional costs, but
 very little control.
+¿ʔ"<img width="1306" height="565" alt="image" src="https://github.com/user-attachments/assets/172b1802-a7f9-413a-8a07-7398ce0b178d" />
 
 There are additional services such as *Function as a Service*,
 *Container as a Service*, and *DataBase as a Service* which be explained later.
