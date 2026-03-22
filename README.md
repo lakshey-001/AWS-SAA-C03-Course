@@ -85,14 +85,31 @@ There are additional services such as *Function as a Service*,
 
 ### Networking
 <img width="1305" height="631" alt="image" src="https://github.com/user-attachments/assets/1289d657-7131-45f1-ae77-ec36915b9b32" />
-*Layer 1 Physical:* Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
+
+**Layer 1 Physical**: Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
   - Physical Shared Medium
   - Standards for transmitting onto the medium
   - Standards from receiving from the medium
   - No access control
   - No uniquely identified devices
   - No device to communication, everything is broadcasted to everyone, including errors and can result in collision too
+
 <img width="500" height="308" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" /> <img width="500" height="308" alt="image" src="https://github.com/user-attachments/assets/137084c4-6f0f-451c-bd35-225a825f1c66" />
+
+**Layer 2 Data Link**: 
+<img width="650" height="350" alt="image" src="https://github.com/user-attachments/assets/ec3be6d1-a189-4b4b-b6b1-2ae505f9cd1b" />
+
+- It works over Layer 1 (mandatory layer)
+- Uses Frame, Mac address (globally unique), to transmit message.
+- Frame consist of;
+  - Preamble (Start Frame Detector or SFD), tells where the message is getting started
+  - Destination and Source Mac address to suggest the source and destination
+  - Ether type (Layer 3 protocol) is putting data inside the frame. Common example is IP
+  - Payload, provided by layer 3 using ET protocol. Process is called encapsulation
+  - Frame check Sequence, which is used to identify any errors in the frame
+- Layer 2 helps in avoiding collison of data being sent across the physical medium. Layer 2 acts as a brain and traffic light controller to avoid collision of data or package
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/9c38d455-42a8-4520-86f8-930589a26464" />
+
 
 ## 1.2. AWS-Fundamentals
 
