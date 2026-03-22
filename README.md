@@ -85,7 +85,7 @@ There are additional services such as *Function as a Service*,
 
 ### Networking
 <img width="1305" height="631" alt="image" src="https://github.com/user-attachments/assets/1289d657-7131-45f1-ae77-ec36915b9b32" />
-**Layer 1 Physical:** Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
+*Layer 1 Physical:* Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
   - Physical Shared Medium
   - Standards for transmitting onto the medium
   - Standards from receiving from the medium
