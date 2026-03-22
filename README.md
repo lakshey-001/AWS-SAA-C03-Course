@@ -84,7 +84,7 @@ There are additional services such as *Function as a Service*,
 - Steganography: Its like invisible ink, data can only be seen under special light. FOr eg, Cipher text is send embeded in an image however, colour of pixel are slightly changed which is invisible to normal eye however, 2nd party will know and it will extract the ciphertext and decrypt the file.
 
 ### Networking
-<img width="1348" height="617" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" />
+<img width="1305" height="631" alt="image" src="https://github.com/user-attachments/assets/1289d657-7131-45f1-ae77-ec36915b9b32" />
 - Layer 1 Physical: Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
   - Physical Shared Medium
   - Standards for transmitting onto the medium
@@ -92,9 +92,7 @@ There are additional services such as *Function as a Service*,
   - No access control
   - No uniquely identified devices
   - No device to communication, everything is broadcasted to everyone, including errors and can result in collision too
-![Uploading image.png…]()
-![Uploading image.png…]()
-
+<img width="1348" height="617" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" />
 
 ## 1.2. AWS-Fundamentals
 
