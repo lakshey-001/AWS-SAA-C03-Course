@@ -69,6 +69,32 @@ There are additional services such as *Function as a Service*,
 *Container as a Service*, and *DataBase as a Service* which be explained later.
 
 ---
+### Encrytion
+- Approaches
+  - Encryption at Rest: Like in Personal Computer where data in hardware is encrypted by password or passcode. Once 1 party involved
+  - Encrytion at Transit: Protecting data when data is transferred from 1 place to another. Like from person to bank. Used when multiple parties are involved
+- Concept
+  - Plaintext: Like Document, Image, App
+  - Algorithm: Blowfish, AES, RC4, DES, RC5, RC6
+  - Key
+  - Ciphertext: Algorithm, takes Plaintext and key to generate Ciphertext. Ciphertext is encrypted text
+- Symmetric Encryption: The same key is used to encrpt or decrypt the key. Transferring over the internet is risky. Is great for local file encrytion or disk encryption, but not good for 2 parties encryption
+- Asymmetric Encryption: Uses Public + private key for both parties. THe receieving party shares his public key which is used by 1st party to create ciphertext. Data is then transferred and decrypted by using the private key by 2nd party
+- Signing: WHen the data is received by 2 nd party, it has to notify to first party that data has been received. TO do it, it sends the data encrypted with his private key which an only be decrypted by the 2nd party public key. It is used for Login Id verification
+- Steganography: Its like invisible ink, data can only be seen under special light. FOr eg, Cipher text is send embeded in an image however, colour of pixel are slightly changed which is invisible to normal eye however, 2nd party will know and it will extract the ciphertext and decrypt the file.
+
+### Networking
+<img width="1348" height="617" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" />
+- Layer 1 Physical: Think connecting 2 or multiple laptop via fiber (light) or copper wire (electrical) or WiFi (RF)
+  - Physical Shared Medium
+  - Standards for transmitting onto the medium
+  - Standards from receiving from the medium
+  - No access control
+  - No uniquely identified devices
+  - No device to communication, everything is broadcasted to everyone, including errors and can result in collision too
+![Uploading image.png…]()
+![Uploading image.png…]()
+
 
 ## 1.2. AWS-Fundamentals
 
