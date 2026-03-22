@@ -92,8 +92,7 @@ There are additional services such as *Function as a Service*,
   - No access control
   - No uniquely identified devices
   - No device to communication, everything is broadcasted to everyone, including errors and can result in collision too
-<img width="674" height="308" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" />
-<img width="668" height="308" alt="image" src="https://github.com/user-attachments/assets/137084c4-6f0f-451c-bd35-225a825f1c66" />
+<img width="500" height="308" alt="image" src="https://github.com/user-attachments/assets/6a18bc9c-b83c-4fc5-a3df-884611a5396b" /> <img width="500" height="308" alt="image" src="https://github.com/user-attachments/assets/137084c4-6f0f-451c-bd35-225a825f1c66" />
 
 ## 1.2. AWS-Fundamentals
 
