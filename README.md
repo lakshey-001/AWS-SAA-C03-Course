@@ -129,8 +129,8 @@ IPV6 has Hop Limit which suggests for many times the packet can hop before it ca
 - IP is divided into network and host part. Network determines if it is local or remote and host represents who sent it
 
 **Subnet Mask** allows a host to determine if an IP address it needs to communicate with is local or remote, which influences if it needs a gateway or can communicate locally. It tells the machine which part of IP is network and which is host component
-<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/d9bc23d9-60dc-4d8b-a206-54a967176f34" /> 
-<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/0d45c78b-6410-479e-ae3c-5959ee0ad15d" />
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/d9bc23d9-60dc-4d8b-a206-54a967176f34" /> 
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/0d45c78b-6410-479e-ae3c-5959ee0ad15d" />
 
 **Route Tables** (take an example how data moves from my computer to AWS) 
 - We create a packet from our house having our and destination IP address
@@ -161,7 +161,58 @@ Above is how everything works together combining ARP, layer 3, 2 and 1, subnet, 
 - Consist of TCP (Transmission Control Protocol)[Slower and reliable] and UDP (User Data Protocol) [Faster and no TCP overhead]
 - TCP is used more over the internet
 -  TCP has segments which are encapsulated within IP Packets
--  Segments dont have SRC and Dest IP's - the packets provide device addressing
+-  Segments dont have SRC and Dest IP's - the packets provide device addressing. It has ports which helps establish connection between two devices
+-  It has Sequence which helps ensure the packets are received in a partiuclar order
+-  It also has acknowledgement which helps understand the packet is succesfully transported
+
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/157b1c98-0b94-4df2-b9cf-28fbf46c7472" /> <img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/7be01736-9812-4084-94cd-999f61f37555" />
+
+TCP connections works in 3 way handshake
+- The client sends a segment with sequence set as cs (ISN) Isitial sequence number
+- Once the server receives it, it sends back acknowledgement with 'cs +1', suggesting it has received uptil segment 'cs' and now send 'cs+1' segment
+- Once the acknowlegement is received by client, it sends the next segment with 'cs+1' sequence adn thereb repeating the process
+
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/340a440a-bce6-4a16-a5e4-6df277961193" />
+
+#### NAT (Network Address Translation)
+- It is designed to overcome shortcomes for IPv4 (useless in IPv6)
+- Private IP address (10.0.0.0) is used at multiple places but cannot be used over the internet since it requires unique public IP addres and that is where NAT comes.
+- Translates Private IPv4s into Public
+- Types of NAT
+  - Static NAT: 1 private to 1 fixed public address
+  - Dynamic NAT: 1 private to 1st available public address on temporarily basis
+  - Port Address Translation (PAT): many private to 1 public address
+
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/0521c3d5-5162-40ae-a00b-c9140068b8cb" /> <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/c85e3f4d-9ffe-4b46-a844-18be5875c75d" />
+
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/5c60f95f-5ece-4252-9cd5-d9e4e9a65225" />
+
+__DDOS (Distributed Denial od Service) Attack__
+- Attacks designed to overlaod websites
+- Competet against legitimate connections
+- Distributed, hard to block individual IPs/Ranges
+- often involve large number of compromised machines (botnet)
+- Types of Attack
+  - Application Layer - HTTP Flood
+  - Protocol Attack - SYN Flood
+  - Volumetric - DNS Amplification
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f3ba9a01-86e6-4bf6-807f-e2981306f364" /> <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/ce3bc09d-5917-4b1c-8f12-da5e4ec15a9a" /> <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/d02c7f7a-5369-4cc5-aaff-d50f7d251855" />
+
+**SSL (secured socket layer) and TLS (Transfer Layer Security)** 
+- Privacy and Data Integrity between client & Server
+  - Privacy is ensured by doing encrpted communication
+  - Encryption starts with asymmetric and then moves to symmetric
+- Identity verification (server or client/server)
+- Reliable conneciton - protect against alteration
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/6aa8b121-f391-479e-9b35-e5b6f883ce9f" />
+
+**Hashing** is a one way process where a unique value is generated. It is a one way process and you cannot obtain the real value from hash. Used for passwork storing. Like SHA256, MD5, etc
+**Digital Signatures** uses public key cryptography. It verifies integrity (WHAT) and authenticity (WHO). Let's assume we need to send a sensitive document across, then;
+- We first use hash function to create a unique hash of the document
+- Simultaneously digitally sign the document using our private key and share the document attaching public key
+- The receipient will use the public key, and if it opens it ensures who shared the document
+- then we pass the document through the same hash function and if the hash matches, it ensured no changes were made in the document
+
 
 ## 1.2. AWS-Fundamentals
 
@@ -177,8 +228,7 @@ Above is how everything works together combining ARP, layer 3, 2 and 1, subnet, 
 
 Refers to the networking only, not permissions.
 
-- Public Internet: AWS is a public cloud platform and connected to the public
-internet. It is not on the public internet, but is next to it.
+- Public Internet: AWS is a public cloud platform and connected to the public internet. It is not on the public internet, but is next to it.
 - AWS Public Zone: Attached to the Public Internet.
 S3 Bucket is hosted in the Public Zone, not all services are.
 Just because you connect to a public service,
