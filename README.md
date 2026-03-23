@@ -110,6 +110,58 @@ There are additional services such as *Function as a Service*,
 - Layer 2 helps in avoiding collison of data being sent across the physical medium. Layer 2 acts as a brain and traffic light controller to avoid collision of data or package
 <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/9c38d455-42a8-4520-86f8-930589a26464" />
 
+In summary for Layer 2;
+- Identifiable devices
+- Media access control (sharing)
+- Collision detection
+- Unicast (1:1)
+- Broadcast 1: ALL
+- Switches - like hubs with superpowers. (Switches have layer 2 framework which only forwards data to the intended mac address)
+
+**Layer 3 Network**: This layer helps in moving from one location to another locaiton (using IPV4 or IPV6)
+<img width="1422" height="600" alt="image" src="https://github.com/user-attachments/assets/0a3ce91c-1309-4068-b0ef-c6c862a751eb" />
+- IP addresses are used to move data from one destination to another destination via intermediatory networks. Satellites are used to do this
+<img width="1200" height="500" alt="image" src="https://github.com/user-attachments/assets/3df73dd3-672e-4209-b75e-046bed4ad857" />
+IPV4 has Time to live, essentially telling for how long the packet will retry to get get delivered before it will be terminated
+IPV6 has Hop Limit which suggests for many times the packet can hop before it can be terminated
+<img width="1200" height="500" alt="image" src="https://github.com/user-attachments/assets/83c8aa66-fea9-401d-a9f7-9233f135d118" />
+
+- IP is divided into network and host part. Network determines if it is local or remote and host represents who sent it
+
+**Subnet Mask** allows a host to determine if an IP address it needs to communicate with is local or remote, which influences if it needs a gateway or can communicate locally. It tells the machine which part of IP is network and which is host component
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/d9bc23d9-60dc-4d8b-a206-54a967176f34" /> 
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/0d45c78b-6410-479e-ae3c-5959ee0ad15d" />
+
+**Route Tables** (take an example how data moves from my computer to AWS) 
+- We create a packet from our house having our and destination IP address
+- All packets we generate are sent to default router which is of our ISP (like Jio, Airtel)
+- ISP has multiple router card which has either 1 or multiple router table
+- All packets are checked for destination router and looks for most specific route address to route the package to
+- 0.0.0.0/0 is called the default route. It is used when nothing else matches. The prefix, /0 means it has 255 more route and /32 is speicif and only has 1 route
+
+**ARP (Address Resolution Protocol)** is used to determine the mac address of the intended IP addres since mac is used by layer 1 to send package to destination
+<img width="1400" height="500" alt="image" src="https://github.com/user-attachments/assets/bd3efcab-3029-4e9f-b019-b8429b8c2c86" />
+- It works between layer 2 and 3
+<img width="1406" height="751" alt="image" src="https://github.com/user-attachments/assets/d393b62d-1fa3-4966-a728-e5943920c8d1" />
+Above is how everything works together combining ARP, layer 3, 2 and 1, subnet, etc.
+
+**Summary**
+- IP Address (IPv4 / IPv6) - cross network addressing
+- ARP - find the mac address, for this IP
+- Route: where to forward this packet
+- Route Tables: multipple routes
+- Router: moves packet from source to destination, encapsulating it on L2 on the way
+- Devive to Device communication over the internet
+- No method for chanels of comunication, from source to destination IP only
+  - Layer 3 provides package which has source and destination IP which means for given 2 devices, we can  only have 1 stream of communication, which is a critical limitation
+- Can be delivered out of order since it can take multiple routes
+
+**Layer 4 Transport** 
+<img width="650" height="400" alt="image" src="https://github.com/user-attachments/assets/75d2dc0e-39cf-4bc1-bcec-3ef47ac0de31" /> 
+- Consist of TCP (Transmission Control Protocol)[Slower and reliable] and UDP (User Data Protocol) [Faster and no TCP overhead]
+- TCP is used more over the internet
+-  TCP has segments which are encapsulated within IP Packets
+-  Segments dont have SRC and Dest IP's - the packets provide device addressing
 
 ## 1.2. AWS-Fundamentals
 
