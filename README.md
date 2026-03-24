@@ -119,6 +119,7 @@ In summary for Layer 2;
 - Switches - like hubs with superpowers. (Switches have layer 2 framework which only forwards data to the intended mac address)
 
 **Layer 3 Network**: This layer helps in moving from one location to another locaiton (using IPV4 or IPV6)
+
 <img width="1422" height="600" alt="image" src="https://github.com/user-attachments/assets/0a3ce91c-1309-4068-b0ef-c6c862a751eb" />
 - IP addresses are used to move data from one destination to another destination via intermediatory networks. Satellites are used to do this
 <img width="1200" height="500" alt="image" src="https://github.com/user-attachments/assets/3df73dd3-672e-4209-b75e-046bed4ad857" />
